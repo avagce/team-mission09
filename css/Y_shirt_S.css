@@ -30,6 +30,9 @@ header{
     height: 100px;
     background-color: #2d3a4b !important;
 }
+.navbar{
+    border-radius: 0 !important;
+}
 .logo{
     float: left;
     margin-left: 50px;
