@@ -115,67 +115,124 @@ nav li a:hover{
     font-size: 18px;
     transform: scale(1.1);
 }
-.center{
-    position: relative;
-    margin: 0 !important;
+.box{
+    display: block;
     width: 100%;
-    height: 2300px;
+    text-align: center;
+    margin-top: 30px;    
 }
-.LOCATION .fas{
-    font-size: 50px;
+.box p{
+    font-size: 40px;
 }
-#map{
-    width:100%;
-    height:550px;
-    background: red
+.bx-wrapper{
+    width: 90% !important;
 }
-.LOCATION{
-    width: 80%;
-    height: 900px;
-    padding: 50px;
-    border-bottom: 3px solid lightgray;
+.bx-viewport{
+    height: 500px;
 }
-.INFORMATION{
-    width: 80%;
+.market{
+    width: 100%;
     height: 550px;
-    padding: 50px;
-    border-bottom: 3px solid lightgray;
 }
-.sbs{
-    width: 80%;
-    height: 700px;
-    padding: 50px;
+.market_list{
+    width: 100%;
 }
-.sbs svg{
-    width: 90px;
-    height: 90px;
+.market img{
+    width: 100%;
+    height: 490px;
 }
-.firstsbs{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 300px;
+#wrapper{
+    margin-bottom: 40px;
 }
-.secondsbs{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 300px;
+.bx-next{
+    background: url(../resources/images/yys_next.svg) !important;
+    opacity: .8;
+    margin-right: 10px;
 }
-.subway{
-    width: 50%;
+.bx-prev{
+    background: url(../resources/images/yys_prev.svg)!important;
+    opacity: .8;
+}
+.center{
+    margin: 30px 30px;
+    margin-right: 30px;
+    width: 93%;
+    height: 165px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;;
+}
+.center li{
+    font-size: 10px;
+}
+.center li a:hover{
+    opacity: .5;
+}
+.best1{
     float: left;
+    width: 22%;
+    height: 18vh;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.bus{
-    width: 50%;
+.best2{
+    float: left;
+    width: 22%;
+    height: 18vh;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.best3{
+    float: left;
+    width: 22%;
+    height: 18vh;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.notice{
+    float: left;
+    width: 22%;
+    height: 18vh;
+    margin-left: 25px;
+}
+.notice_title{
+    background: #999;
+    vertical-align: middle;
+}
+.notice_title small{
+    margin-top: 4px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
     float: right;
 }
-.navigation{
-    clear: both;
-    float: left;
-    width: 50%;
+table{
+    table-layout: fixed;
 }
-.park{
+tr, td, th{
+    font-size: 10px !important;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+th{
+    margin-right: 10px !important;
+    width: 30px;
+}
+.notice li{
+    line-height: 20px;
+}
+.notice h4{
+    font-size: 20px;
+}
+.notice a{
+    font-size: 12px;
+    font-family: 'MonoplexKR-Regular';
+    color: #000;
+}
+.notice span{
     float: right;
-    width: 50%;
+    color: lightgray;
 }
 footer{
     width: 100%;
@@ -213,7 +270,6 @@ footer li a{
     font-family: "맑은 고딕";
     color: #000;
 }
-footer li a:hover{text-decoration: underline;}
 @media (min-width: 768px)  and (max-width: 1199px){
     *{
         margin: 0 auto;
@@ -262,29 +318,7 @@ footer li a:hover{text-decoration: underline;}
         margin-left: 5px;
         background: #656e7a;
     }
-    .LOCATION .fas{
-        font-size: 40px;
-    }
-    .LOCATION{
-        height: 700px;
-    }
-    .LOCATION h1{
-        font-size: 30px;
-    }
-    .INFORMATION h2{
-        font-size: 25px;
-    }
-    #map{
-        height: 400px;
-    }
-    .sbs svg{
-        width: 60px;
-        height: 60px;
-    }
-    .sbs h2{
-        font-size: 20px;
-    }
- }
+}
 @media (max-width: 767px) {
     *{
         margin: 0 auto;
@@ -331,8 +365,8 @@ footer li a:hover{text-decoration: underline;}
         border: none !important;
     }
     nav li a:hover{
-        font-size: 13px;
-        margin-left: 10px;
+        font-size: 12px;
+        margin-left: 4px;
         font-weight: normal;
     }
     .search img{
@@ -356,35 +390,74 @@ footer li a:hover{text-decoration: underline;}
         border: none !important;
         color: #fff !important;
     }
-    .LOCATION .fas{
-        font-size: 30px;
-    }
-    .center{
-        height: 1700px;
-    }
-    .LOCATION{
-        height: 550px;
-    }
-    .LOCATION h1{
-        font-size: 25px;
-    }
-    .INFORMATION{
-        height: 450px;
-    }
-    .INFORMATION h2{
-        font-size: 20px !important;
-    }
-    .INFORMATION h3{
-        font-size: 15px;
-    }
-    #map{
-        height: 300px;
-    }
-    .sbs svg{
-        width: 40px;
-        height: 40px;
-    }
-    .sbs h2{
+    .box p{
         font-size: 18px;
+        margin-bottom: 25px;
     }
+    .search1{
+        position: relative;
+        height: 20px;
+        width: 85px;
+        font-size: 8px;
+    }
+    .search2{
+        position: absolute;
+        width: 30px !important;
+        height: 20px !important;
+        font-size: 8px;
+    }
+    #wrapper img{
+        height: 200px;
+    }
+    .market{
+        height: 350px;
+    }
+    .bx-viewport{
+        height: 300px !important;
+    }
+    .market img{
+        width: 100%;
+        height: 290px;
+    }
+    .notice{
+        position: absolute;
+        right: 3%;
+    }
+    .notice_title h4{
+        font-size: 11px;
+        line-height: 17px;
+    }
+    .notice_title small{
+        font-size: 11px;
+    }
+    .notice ul{
+        margin-top: 10px;
+    }
+    .notice li{
+        font-size: 8px;
+        line-height: 10px;
+    }
+    .notice a{
+        font-size: .8rem;
+        font-family: 'MonoplexKR-Regular';
+        color: #000;
+    }
+    .notice a span{
+        visibility: hidden;
+    }
+    th{
+        width: 20px;
+    }
+    td{
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        word-break: break-all;
+    }
+    table{
+        vertical-align: middle;
+    }
+    footer{
+        visibility: hidden;
+    }
+   
 }

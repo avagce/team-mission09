@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../javascript/jquery-2.2.4.min.js"></script>
+    <title>Y_shirt_S_main</title>
+    <style>
+        @font-face {
+            font-family: 'MonoplexKR-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'MonoplexKR-Regular';
+        }
+
+        a {
+            padding: 20px;
+            color: beige;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 100px;
+        }
+
+        a:hover {
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        #wrapper {
+            width: 100%;
+            background: #2d3a4b;
+            height: 100px;
+        }
+
+        img {
+            float: left;
+            width: 150px;
+            margin-left: 50px;
+            margin-top: 5px;
+        }
+
+        .box {
+            width: 200px;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="../html/Y shirt S.html"><img src="../resources/images/Y_shirt_S2.png" alt=""></a>
+        <a href="#" class="tubular-play">재생</a>
+        <a href="#" class="tubular-pause">일시정지</a>
+        <a href="Y shirt S.html">홈으로</a>
+        <p class="box">
+            비투비도 입은 Y_shirt_S
+        </p>
+    </div>
+    <div>
+
+    </div>
+    <script src="../javascript/jquery.tubular.1.0.js"></script>
+    <script>
+        $('document').ready(function () {
+            var options = { videoId: 'tAgqM2BeQEU', mute: true };
+            $('#wrapper').tubular(options);
+            // f-UGhWj1xww cool sepia hd
+            // 49SKbS7Xwf4 beautiful barn sepia
+        });
+    </script>
+</body>
+
+</html>
