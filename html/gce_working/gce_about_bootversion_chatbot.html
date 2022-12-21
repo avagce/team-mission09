@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/about_bootversion.css">
+</head>
+<style>
+ 
+    
+    @media only screen and (max-width:768px){
+      .embed-responsive-4by3{
+        display: none;
+      }
+
+     .ligroup{
+      padding-top: 30%;
+     }
+      
+     
+      .list-group-item{
+        padding: 0.1rem;
+        margin: 0.1rem;
+        font-size: 0.1rem;
+      }
+    
+    }
+   
+    
+</style>
+<body>
+    <div class="all_wrap">
+        
+        <div class="youtube_top">
+                <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" width="100%" height="100%" src="https://www.youtube.com/embed/3iM_06QeZi8?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                
+                <div class="header">
+                    <div><h1 class="animate__animated animate__bounce">IU Fan Page</h1></div>
+
+                    <nav id="navibar" class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="resources/gce/iutexticon.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                                메뉴
+                              </a>
+                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <i class="fa-sharp fa-solid fa-door-open"><a class="nav-link active" aria-current="page" href="gce_about_bootversion.html">Home</a></i>
+                                
+                               
+                             </li>
+                              <li class="nav-item">
+                                <i class="fa-sharp fa-solid fa-circle-info"><a class="nav-link active" aria-current="page" href="bootversion_page/gce_about_bootversion_introduce.html">소 개</a></i>
+                                 
+                              </li>
+                              <li class="nav-item">
+                                <i class="fa-sharp fa-solid fa-music"><a class="nav-link active" aria-current="page" href="bootversion_page/gce_about_bootversion_album.html">음 반</a></i>
+                                
+                                
+                             </li>
+                             <li class="nav-item">
+                              <i class="fa-sharp fa-solid fa-film"><a class="nav-link active" aria-current="page" href="bootversion_page/gce_about_bootversion_actor.html">배우활동</a></i>
+                              
+                              
+                                
+                             </li>
+                             <li class="nav-item">
+                              <i class="fa-sharp fa-solid fa-tv"><a class="nav-link active" aria-current="page" href="bootversion_page/gce_about_bootversion_perform.html">방송활동</a></i>
+                                
+                             </li>
+                             <li class="nav-item">
+                              <i class="fa-sharp fa-solid fa-award"><a class="nav-link active" aria-current="page" href="bootversion_page/gce_about_bootversion_awards.html">수상경력</a></i>
+                                
+                             </li>
+                             <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="bootversion_page/gce_about_bootversion_tubular.html">갤러리</a>
+                                
+                             </li>
+                              
+                            </ul>
+                          
+                          </div>
+                        </div>
+                      </nav>
+
+                     
+        </div>
+        
+        <div class="content">
+
+        </div>
+    
+        
+    </div>
+    <!-- Channel Plugin Scripts -->
+<script>
+  (function() {
+    var w = window;
+    if (w.ChannelIO) {
+      return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+    }
+    var ch = function() {
+      ch.c(arguments);
+    };
+    ch.q = [];
+    ch.c = function(args) {
+      ch.q.push(args);
+    };
+    w.ChannelIO = ch;
+    function l() {
+      if (w.ChannelIOInitialized) {
+        return;
+      }
+      w.ChannelIOInitialized = true;
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+      s.charset = 'UTF-8';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+    if (document.readyState === 'complete') {
+      l();
+    } else if (window.attachEvent) {
+      window.attachEvent('onload', l);
+    } else {
+      window.addEventListener('DOMContentLoaded', l, false);
+      window.addEventListener('load', l, false);
+    }
+  })();
+  ChannelIO('boot', {
+    "pluginKey": "350a2104-b1f4-40fb-9d1b-bfee2978aa5b"
+  });
+</script>
+<!-- End Channel Plugin -->
+</body>
+</html>
