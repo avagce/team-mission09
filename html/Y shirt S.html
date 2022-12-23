@@ -78,9 +78,8 @@
     </div>
     <div class="box">
         <div class="palx" data-width="1200" data-height="600">
-            <p>fdsf</p>
+            <p class="palxtext">Welcome Y_shirt_S</p>
         </div>
-        <p title="Welcome Y shirt S !">Welcome Y shirt S !</p>
         <div class="owl-carousel owl-theme" id="wrapper">
             <div class="item">
                 <img src="../resources/images/yys_owl1.jpg" alt="이미지1" width="500px" height="500px">
@@ -250,6 +249,11 @@
                         });
                         
             }); 
+            $(document).ready(function(){
+            // $(".palxtext").delay(1000).animate()
+            // 의미는 .palxtext에 적용된 animate() 메서드가 1000ms(1s = 1초)후에 작동함을 의미합니다.
+            $(".palxtext").delay(1000).animate({opacity:1, top:300}, 500, "swing")
+        })
     </script>
 </body>
 </html>
