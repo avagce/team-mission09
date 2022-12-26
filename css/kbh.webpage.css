@@ -58,11 +58,14 @@
     background: rgba(0,0,0,0.5);
     text-align: center;
     line-break: auto;
+    display: contents;
 
 }
 
 .nav>li{
-    margin-left: 72px;
+    margin-left: 55px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     
 }
 
@@ -182,6 +185,7 @@ font-style: normal;
 .navbar-inverse .navbar-brand{
     font-size: 35px;
     color: #ffbb00;
+    display: contents;
 }
 
 .container-fluid{
@@ -263,11 +267,13 @@ i{
 
 .closewrap{
     background-color: rgb(49, 197, 255);
-    color: rgba(0, 95, 124, 0.623);
+    color: rgba(12, 9, 5, 0.623);
     text-align: center;
-    padding: 5px 10px;
+    padding: 1px 1px;
     font-size: 25px !important;
     margin: 0 auto;
+    display: block;
+
 
 }
 .closeBtn{
@@ -290,6 +296,7 @@ input{
 }
 
 label{
-    font-size: 17px !important;
+    font-size: 18px !important;
     
 }
+
