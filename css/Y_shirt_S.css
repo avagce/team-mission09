@@ -12,21 +12,16 @@
     text-decoration: none;
     font-family: 'Noto Sans KR', sans-serif;
 }
-body{
-    width: 100%;
-    height: 100%;
-}
 hr{
     margin-top: 5px !important;
     margin-bottom: 5px !important;
 }
 #cookie{
     position: absolute;
-    top: 70%;
+    top: 10%;
     left: 20%;
-    width: 1000px;
-    height: 500px;
-    background: red;
+    width: 700px;
+    height: 300px;
     
 }
 #cookie img{
@@ -49,12 +44,21 @@ hr{
     top: 10px;
     width: 55px;
     height: 25px;
+    background: lightgray;
     display: inline-block !important;
     line-height: 15px;
+    color: #000;
+}
+.closeWrap{
+    width: 100%;
+    height: 30px;
+    padding-right: 20px;
+    background: black;
+    text-align: right;
+    color: #fff;
 }
 header{
     position: relative;
-    right: 10px;
     width: 100%;
     height: 100px;
     background-color: #2d3a4b !important;
@@ -204,7 +208,6 @@ nav li a:hover{
 .banner{
     width: 100%;
     height: 850px;
-    background-color: red;
     margin-bottom: 100px;
 }
 .banner1{
@@ -217,18 +220,31 @@ nav li a:hover{
     text-align: center;
     font-size: 40px;
     opacity: .8;
+    color: lightskyblue;
 }
 .cody{
+    position: relative;
     float: left;
     width: 49%;
     height: 500px;
-    background: blue;
+    box-shadow: 10px 10px 10px gray;
+}
+.cody img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .best{
+    position: relative;
     float: right;
     width: 49%;
     height: 500px;
-    background: aqua;
+    box-shadow: 10px 10px 10px gray;
+}
+.best img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .banner2{
     width: 100%;
@@ -236,29 +252,38 @@ nav li a:hover{
     padding-left: 30px;
     padding-right: 30px;
 }
-.test1{
+.event1{
+    position: relative;
     float: left;
     width: 24.5%;
     height: 250px;
-    background: blueviolet;
+    box-shadow: 0 10px 10px gray;
 }
-.test2{
+.event1 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.event2{
     float: left;
     width: 24.5%;
     height: 250px;
     background: khaki;
+    box-shadow: 10px 10px 10px gray;
 }
-.test3{
+.event3{
     float: right;
     width: 24.5%;
     height: 250px;
     background-color: violet;
+    box-shadow: 10px 10px 10px gray;
 }
-.test4{
+.event4{
     float: right;
     width: 24.5%;
     height: 250px;
     background: palegreen;
+    box-shadow: 0px 10px 10px gray;
 }
 footer{
     width: 100%;

@@ -133,23 +133,24 @@
     <div class="banner">
         <div class="banner1">
             <div class="cody">
-                <p>CODY</p>
+                <a href="#"><img src="../resources/images/yys_CODY1.jpg" alt="CODY"><p>CODY</p></a>
             </div>
             <div class="best">
-                <p>BEST</p>
+                
+                <a href="#"><img src="../resources/images/yys_cody.jpg" alt="Best"><p>BEST</p></a>
             </div>
         </div>
         <div class="banner2">
-            <div class="test1">
-                <p>test1</p>
+            <div class="event1">
+                <a href="#"><img src="../resources/images/yys_event1.jpg" alt=""></a>
             </div>
-            <div class="test2">
+            <div class="event2">
                 <p>test2</p>
             </div>
-            <div class="test3">
+            <div class="event3">
                 <p>test3</p>
             </div>
-            <div class="test4">
+            <div class="event4">
                 <p>test4</p>
             </div>
         </div>
@@ -214,30 +215,26 @@
                 // 완전히 고정되어 콘텐츠만 스크롤 됩니다. 0과 1사이의 값을 적절히 사용하면 콘텐츠와 배경의 스크롤 속도를 다르게해서 패럴렉스 효과를 낼 수 있습니다.
                     friction: 0.5
         });
-
+        // $(".palxtext").delay(1000).animate()
+        // 의미는 .palxtext에 적용된 animate() 메서드가 1000ms(1s = 1초)후에 작동함을 의미합니다.
+        $(".palxtext").delay(1000).animate({ opacity: 0.8, top: 300 }, 600, "swing")
         });
-        $(document).ready(function () {
-            // $(".palxtext").delay(1000).animate()
-            // 의미는 .palxtext에 적용된 animate() 메서드가 1000ms(1s = 1초)후에 작동함을 의미합니다.
-            $(".palxtext").delay(1000).animate({ opacity: 0.8, top: 300 }, 600, "swing")
-            if ($.cookie('popup') == 'none') {
-                $("#notice_wrap").hide();
+             // 쿠키("popup")의 값이 'none'이면
+            // id값이 'notice_wrap'인 요소를 숨깁니다.
+            if($.cookie('popup') == 'none'){
+                $("#cookie").hide();
             }
-        })
-        var $expiresChk = $("#expiresChk");
-        $(".closeBtn").on("click", closePop);
-        function closePop() {
-            if ($expiresChk.is(":checked")) {
-                $.cookie("popup", "none", { expires: 3, path: "/" });
+            // cookie 값이'closeBtn'인 요소를 클릭하면
+            // 체크박스의 체크 유무에 따라
+            // 쿠키를 생성하여 하루동안 저장합니다.
+            var $expiresChk = $("#expiresChk");
+            $(".closeBtn").on("click", closePop);
+            function closePop(){
+                if($expiresChk.is(":checked")){
+                    $.cookie("popup", "none", {expires:1, path:"/"});
+                }
+                $("#cookie").fadeOut("fast");
             }
-            $("#notice_wrap").fadeOut("fast");
-            // $(".palxtext").delay(1000).animate()
-            // 의미는 .palxtext에 적용된 animate() 메서드가 1000ms(1s = 1초)후에 작동함을 의미합니다.
-            $(".palxtext").delay(1000).animate({ opacity: 0.8, top: 300 }, 600, "swing")
-            if ($.cookie('popup') == 'none') {
-                $("#notice_wrap").hide();
-            }
-        }
     </script>
 </body>
 

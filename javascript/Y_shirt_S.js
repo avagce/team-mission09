@@ -36,7 +36,4 @@
 ChannelIO('boot', {
     "pluginKey": "3bea6599-cfec-4023-9044-9ebfa692eec3"
 });
-// class 값이'closeBtn'인 요소를 클릭하면
-// 체크박스의 체크 유무에 따라
-// 쿠키를 생성하여 3일간 저장합니다.
 
