@@ -32,6 +32,9 @@
 <script src="../javascript/owl.navigation.js"></script>
 <script src="../javascript/vegas.min.js"></script>
 <link rel="stylesheet" href="../css/vegas.min.css">
+<script src="../javascript/script.js" defer type="text/javascript"></script>
+<script src="../javascript/jquery.cookie.js"></script>
+
 </head>
 <script>
   $(document).ready(function() {
@@ -156,6 +159,14 @@
       </div>
     </div>
   </nav>
+  <div id="notice_wrap">
+    <img src="../resources/images/kbh_notice.jpg" alt="공지사항이미지" width="300px" height="300px">
+    <p class="closewrap">
+        <input type="checkbox" name="expiresChk" id="expiresChk">
+        <label for="expiresChk">3일동안 이 창 열지 않기</label>
+        <button class="closeBtn">닫기</button>
+    </p>
+</div>
 </div>
 
 <script>
@@ -173,5 +184,23 @@
       });
   });
 </script>
+
+<script>
+  $(function(){
+      // 쿠기("popup")의 값이 'none'이면 id값이 'notice_wrap'인 요소를 숨깁니다
+      if($.cookie('popup')=='none'){
+          $("#notice_wrap").hide();
+      }
+      // class값이 'closeBtn'인 요소를 클릭하면 체크박스의 체크 유무에 따라 쿠기를 생성하여 3일간 저장
+      var $expiresChk=$("#expiresChk");
+      $(".closeBtn").on("click",closePop);
+      function closePop(){
+          if($expiresChk.is(":checked")){
+              $.cookie("popup", "none",{expires:3,path:"/"});
+          }
+          $("#notice_wrap").fadeOut("fast");
+      }
+  });
+  </script>
 </body>
 </html>
