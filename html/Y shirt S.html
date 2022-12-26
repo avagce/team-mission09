@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +16,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/jquery.bxslider.css">
     <script src="../javascript/jquery.bxslider.min.js"></script>
+    <script src="../javascript/jquery.cookie.js"></script>
 </head>
+
 <body>
     <div id="page">
         <header class="navbar navbar-inverse">
             <div class="logo">
-                <a href="Y shirt S.html" title="Y shirt S"><img src="../resources/images/Y_shirt_S2.png" alt="Y shirt S"style="height: 94px;"></a>
+                <a href="Y shirt S.html" title="Y shirt S"><img src="../resources/images/Y_shirt_S2.png" alt="Y shirt S"
+                        style="height: 94px;"></a>
             </div>
             <div class="top_menu">
                 <ul>
@@ -35,7 +39,8 @@
                 <!-- bootstrap 사용하여 큰화면 데스크탑 화면에서 보이지 않도록 hidden-lg적용 -->
                 <!-- 뷰포트가 좁을 때 nav가 보여지지 않도록 navbar-toggle collapsed적용 -->
                 <!-- 뷰포트가 좁을 때 처음 #bsnavidar가 숨겨질 수 있도록 data-toggle="collapse"을 적용, fontawesom 이미지가 클릭했을 때 data-target의 메뉴가 toggle할 수 있도록 id값을 알맞게 설정 -->
-                <i class="fas fa-bars visible-xs hbg navbar-toggle collapsed" data-toggle="collapse" data-target="#bsnavibar"></i>
+                <i class="fas fa-bars visible-xs hbg navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bsnavibar"></i>
             </a>
             <!-- id값을 동일하게 bsnavibar 적용 -->
             <nav class="collapse navbar-collapse visible-xs" id="bsnavibar">
@@ -48,31 +53,43 @@
                     <li class="active text-capitalize"><a href="#" title="악세사리">acc</a></li>
                     <li class="active text-capitalize"><a href="#" title="고객센터">c/s</a></li>
                     <li class="search">
-                        <input class="search1 visible-lg visible-xs form-control" type="search" title="검색어입력" placeholder="검색">
+                        <input class="search1 visible-lg visible-xs form-control" type="search" title="검색어입력"
+                            placeholder="검색">
                         <img class="visible-lg visible-xs" src="../resources/images/yys_search_icon.svg" alt="검색아이콘">
                     </li>
                     <li>
-                        <input class="search2 visible-sm visible-md" type="button" value="검색" title="검색" data-toggle="modal" data-target="#myModal">    
+                        <input class="search2 visible-sm visible-md" type="button" value="검색" title="검색"
+                            data-toggle="modal" data-target="#myModal">
                     </li>
                 </ul>
             </nav>
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">검색어를 입력해주세요</h4>
-                    </div>
-                    <div class="modal-body">
-                    <input class="form-control" type="text" placeholder="검색어입력">
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-                    <button type="button" class="btn btn-primary">검색</button>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">검색어를 입력해주세요</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input class="form-control" type="text" placeholder="검색어입력">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-primary">검색</button>
+                        </div>
                     </div>
                 </div>
-                </div>
+            </div>
+            <div id="cookie">
+                <img src="../resources/images/yys_cookie.jpg" alt="공지사항이미지" width="500px" height="500px">
+                <p class="closeWrap">
+                    <input type="checkbox" name="expiresChk" id="expiresChk">
+                    <label for="expiresChk">3일동안 이 창 열지 않기</label>
+                    <button class="closeBtn">닫기</button>
+                </p>
             </div>
         </header>
     </div>
@@ -99,7 +116,7 @@
             <div class="item">
                 <img src="../resources/images/yys_owl6.jpg" alt="이미지1" width="500px" height="500px">
             </div>
-        </div>       
+        </div>
     </div>
     <div class="market">
         <div class="market_list">
@@ -122,8 +139,8 @@
             <div class="best">
                 <p>BEST</p>
             </div>
-       </div>
-       <div class="banner2">
+        </div>
+        <div class="banner2">
             <div class="test1">
                 <p>test1</p>
             </div>
@@ -136,108 +153,31 @@
             <div class="test4">
                 <p>test4</p>
             </div>
-       </div>
+        </div>
     </div>
-   
+
     <footer>
         <div class="ft_text">
             <p><strong>(주) Y shirt S</strong> | CEO : <strong>황태용</strong>
-            | 사업자등록번호:432-12-43265 | 개인정보 관리책임자: <strong>황태용</strong> : (hty20221105@gmail.com) <br>
-            &copy; 2022 Y shirt S |  ALL RIGHTS RESERVED. 
-            <a href="#"> 개인정보 처리방침 |</a>
-            <a href="#"> 이용약관 |</a>
-             고객센터 : 000-0000-0000 | 주소 : 서울특별시 구로구 구로동 살기좋은동네<br>
-            고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 
-            PG사의 구매안전 서비스를 이용하실 수 있습니다.</p>
+                | 사업자등록번호:432-12-43265 | 개인정보 관리책임자: <strong>황태용</strong> : (hty20221105@gmail.com) <br>
+                &copy; 2022 Y shirt S | ALL RIGHTS RESERVED.
+                <a href="#"> 개인정보 처리방침 |</a>
+                <a href="#"> 이용약관 |</a>
+                고객센터 : 000-0000-0000 | 주소 : 서울특별시 구로구 구로동 살기좋은동네<br>
+                고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한
+                PG사의 구매안전 서비스를 이용하실 수 있습니다.
+            </p>
         </div>
-            <ul>
-                <li><a href="#">고객센터 |</a></li>
-                <li><a href="#">개인정보처리방침 |</a></li>
-                <li><a href="#">1:1문의 |</a></li>
-                <li><a href="#">이용약관</a></li>
-            </ul>
+        <ul>
+            <li><a href="#">고객센터 |</a></li>
+            <li><a href="#">개인정보처리방침 |</a></li>
+            <li><a href="#">1:1문의 |</a></li>
+            <li><a href="#">이용약관</a></li>
+        </ul>
     </footer>
     <script src="../javascript/owl.carousel.js"></script>
     <script src="../javascript/owl.autoplay.js"></script>
     <script src="../javascript/owl.navigation.js"></script>
     <script src="../javascript/jquery.parallax-scroll.min.js"></script>
-    <script>
-         (function() {
-      var w = window;
-      if (w.ChannelIO) {
-        return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
-      }
-      var ch = function() {
-        ch.c(arguments);
-      };
-      ch.q = [];
-      ch.c = function(args) {
-        ch.q.push(args);
-      };
-      w.ChannelIO = ch;
-      function l() {
-        if (w.ChannelIOInitialized) {
-          return;
-        }
-        w.ChannelIOInitialized = true;
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-        s.charset = 'UTF-8';
-        var x = document.getElementsByTagName('script')[0];
-        x.parentNode.insertBefore(s, x);
-      }
-      if (document.readyState === 'complete') {
-        l();
-      } else if (window.attachEvent) {
-        window.attachEvent('onload', l);
-      } else {
-        window.addEventListener('DOMContentLoaded', l, false);
-        window.addEventListener('load', l, false);
-      }
-    })();
-    ChannelIO('boot', {
-      "pluginKey": "3bea6599-cfec-4023-9044-9ebfa692eec3"
-    });
-  <!-- End Channel Plugin -->
-         $(function(){
-            var owl = $('.owl-carousel');
-                owl.owlCarousel({
-                    items : 3, //  화면에 보여질 item 개수
-                    loop : true,    // 반복 여부 
-                    margin : 20,    // 사진간의 간격
-                    autoplay : true,    // 자동 재생
-                    autoplayTimeout : 3000, // 자동 재생 시간 (2000ms = 2s, 2000밀리초 = 2초)
-                    autoplayHoverPause : true, // 재생화면 위로 마우스를 올리면 멈춤
-                    nav: true, // nav버튼 활성화
-                    navText : ['이전','다음'], // navText 표현 지정
-                });
-                $('.play').on('click',function(){
-                    owl.trigger('play.owl.autoplay',[3000])
-                })
-                $('.stop').on('click',function(){
-                    owl.trigger('stop.owl.autoplay')
-                })
-                $('.market_list').bxSlider({
-                    auto: true,// 자동재생
-                    speed:500,  // 사진 전환 속도 설정(500 = 500ms = 0.5s = 0.5초)
-                    stopAutoOnClick: true,  // 애니메이션 유지 시간(1000 = 1000ms = 1s = 1초) 
-                    pager: true, // 이전(<), 다음(>) 버튼을 누르면 슬라이드가 정지됨
-                    slideWidth: 1200, // 페이지의 width(폭) 1200px
-                });
-                // .bg-holder 요소에서 parallaxScroll을 실행합니다.
-                $('.palx').parallaxScroll({
-                        // parallax-Scroll플러그인의 옵션은 friction 옵션 하나뿐입니다. 이 옵션값은 0에서 1사이의 소수로 표시하는데, 0이면 배경이미지가 콘텐츠를 따라 스크롤 되고, 1이면 배경이 완전히 고정되어 콘텐츠만 스크롤 됩니다. 0과 1사이의 값을 적절히 사용하면 콘텐츠와 배경의 스크롤 속도를 다르게해서 패럴렉스 효과를 낼 수 있습니다.
-                        friction: 0.5
-                        });
-                        
-            }); 
-            $(document).ready(function(){
-            // $(".palxtext").delay(1000).animate()
-            // 의미는 .palxtext에 적용된 animate() 메서드가 1000ms(1s = 1초)후에 작동함을 의미합니다.
-            $(".palxtext").delay(1000).animate({opacity:0.8, top:300}, 600, "swing")
-        })
-    </script>
 </body>
 </html>
