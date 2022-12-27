@@ -170,7 +170,7 @@ font-style: normal;
 }
 
 
-#wrappe1r{
+#wrapper{
     display: contents;
     position: initial;
     width: 1000px;
@@ -327,10 +327,11 @@ label{
 }
 
 .middlebar{
-    font-size: 15px !important;
+    /* font-size: 15px !important; */
     display: contents;
     /* margin-right: 30px; */
-    margin: 15 15px !important;
-    
+    width: 10px !important;
+    height: 10px !important;
+
 
 }
