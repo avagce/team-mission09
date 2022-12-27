@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- <link href="https: //fonts.googleapis.com/css2? family= Noto+Sans+KR:wght@100;400;500 & display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="../css/kbh.webpage.css">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- font-awesome.css추가 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="../javascript/script.js" defer type="text/javascript"></script>
+<link rel="stylesheet" href="../css/owl.carousel.css">
+<link rel="stylesheet" href="../css/owl.theme.default.css">
+<script src="../javascript/jquery-2.2.4.min.js"></script>
+<script src="../javascript/owl.carousel.js"></script>
+<script src="../javascript/owl.autoplay.js"></script>
+<script src="../javascript/owl.navigation.js"></script>
+<script src="../javascript/vegas.min.js"></script>
+<link rel="stylesheet" href="../css/vegas.min.css">
+<script src="../javascript/script.js" defer type="text/javascript"></script>
+<script src="../javascript/jquery.cookie.js"></script>
+
+</head>
+<script>
+  $(document).ready(function() {
+    //문서 전체(body 태그)에 플러그인 적용함
+    $('body').vegas({
+      slides: [
+        //초반이미지 나타나게 함. 주석처리하면 안 나타남
+        // {src: '/videos/sea.jpg'},
+        {
+          //video{}안에 배경 동영상과 옵션값 지정함
+          video: {
+            //src 속성을 사용해 동영상 지정해 줌
+            src: [
+              '/resources/images/videos/kbh_walking.mp4'],
+              //loop 속성을 사용해 동영상 반복 여부 지정함
+              loop: true,
+              //동영상을 무음상태로 만들어 줌
+              mute: true
+            }
+          }
+        ]
+      });
+    });
+    </script>
+<body>
+  <!-- 부트스트랩 네비게이션바 -->
+  <!-- http://bootstrapk.com/components/#navbar -->
+  <!-- 반응형 고정폭 컨테이너를 위해 .contaniner를 사용하시기 바랍니다 -->
+  <div class="container" style="padding-top: 100px;">
+    <!-- 컴포넌트-네이게이션 바- 반전된 네이게이션 바 navbar-inverse 적용-->
+  <nav class="navbar navbar-inverse">
+    <!-- 뷰포트 전체폭까지 늘어나는 최대폭 컨테이너를 위해 .container-fluid를 적용 -->
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- 확장과 축소가 되는 버튼 영역은 button 태그로 마크업하고 -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bsnavibar">
+          <!-- sr-only(장애인분들을 배려한 웹접근성 screen reader only)
+          클래스를 사용하여 원하는 요소를 화면상에서는 사라지게 하는 동시에 웹 접근성을 높여줌 -->
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">HOME MART</a>
+        <!-- font-awesome 아이콘 적용 -->
+        <i class="fas fa-user"></i>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bsnavibar">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#" target="_blank">전단행사 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="active">
+           <a href="#" target="_blank">신상품 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="active">
+           <a href="#" target="_blank">베스트 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="active">
+            <!--tublar를 이용하여 회사소개 영상 재생  -->
+            <a href="../html/kbh_tublar.html" target="_blank">회사소개 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="active">
+            <a href="#" target="_blank">이벤트존 <span class="sr-only">(current)</span></a>
+          </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    <ul class="text">
+      <img src="../resources/images/kbh_icon.svg" width="130px" height="130px" alt="svg이미지">
+      <li><a href="#" class="btn btn-danger">제철과일<a></li>
+      <li><a href="#" class="btn btn-info">생활용품<a></li>
+      <li><a href="#" class="btn btn-primary">냉동식품<a></li>
+      <li><a href="#" class="btn btn-success">욕실용품<a></li>
+      <li><a href="#" class="btn btn-warning">청소용품<a></li>
+    </ul>
+    <!-- carousel를 이용하여 자동으로 이미지 슬라이드 효과 -->
+    <div id="wrapper">
+      <div class="owl-carousel owl-theme">
+          <div class="item">
+              <img src="../resources/images/kbh_mart-1.jpg"  alt="이미지1">
+          </div>
+          <div class="item">
+              <img src="../resources/images/kbh_mart-2.jpg"  alt="이미지2">
+          </div>
+          <div class="item">
+              <img src="../resources/images/kbh_mart-3.jpg" alt="이미지3">
+          </div>
+          <div class="item">
+              <img src="../resources/images/kbh_mart-4.jpg"  alt="이미지4">
+          </div>
+          <div class="item">
+              <img src="../resources/images/kbh_mart-5.jpg"  alt="이미지5">
+          </div>
+      </div>
+    <!-- 여러장의 이미지를 fade out 효과 -->
+  </div>
+  <div class="wrapper">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+            <img src="../resources/images/kbh_mart-6.jpg" alt="이미지1">
+      </div>
+      <div class="item">
+            <img src="../resources/images/kbh_mart-7.jpg" alt="이미지2">
+      </div>
+      <div class="item">
+            <img src="../resources/images/kbh_mart-8.jpg" alt="이미지3">
+      </div>
+      <div class="item">
+            <img src="../resources/images/kbh_mart-9.jpg" alt="이미지3">
+      </div>
+      <div class="item">
+            <img src="../resources/images/kbh_mart-10.jpg" alt="이미지3">
+      </div>
+      <div class="item">
+            <img src="../resources/images/kbh_mart-11.jpg" alt="이미지3">
+      </div>
+    </div>
+  </nav>
+  <div id="notice_wrap">
+    <img src="../resources/images/kbh_notice.jpg" alt="공지사항이미지" width="300px" height="300px">
+    <p class="closewrap">
+        <input type="checkbox" name="expiresChk" id="expiresChk">
+        <label for="expiresChk">3일동안 이 창 열지 않기</label>
+        <button class="closeBtn">닫기</button>
+    </p>
+</div>
+</div>
+
+<script>
+  $(function(){
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+          items:3, //화면에 표시할 항목 개수 지정: 여기서는 5개 이미지 중에서 3개 항목을 보여줌
+          loop:true, //무한 반복 작용 여부
+          nav:true, //nav 활성화
+          nacText:['이전','다음'],
+          margin:10, //항목(item)과 항목(item) 사이의 간격(margin 적용)
+          autoplay:true,//자동 스크롤 실행
+          autoplayTimeout:1000,//자동 스크롤 시간 간격, 밀리초 단위: 1000ms = 1s -1초
+          autoplayHoverPause:true//내용 위로 마우스 포인터를 올리면 자동 스크롤 일시 멈춤
+      });
+  });
+</script>
+
+<script>
+  $(function(){
+      // 쿠기("popup")의 값이 'none'이면 id값이 'notice_wrap'인 요소를 숨깁니다
+      if($.cookie('popup')=='none'){
+          $("#notice_wrap").hide();
+      }
+      // class값이 'closeBtn'인 요소를 클릭하면 체크박스의 체크 유무에 따라 쿠기를 생성하여 3일간 저장
+      var $expiresChk=$("#expiresChk");
+      $(".closeBtn").on("click",closePop);
+      function closePop(){
+          if($expiresChk.is(":checked")){
+              $.cookie("popup", "none",{expires:3,path:"/"});
+          }
+          $("#notice_wrap").fadeOut("fast");
+      }
+  });
+  </script>
+</body>
+</html>
