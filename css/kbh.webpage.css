@@ -200,6 +200,9 @@ font-style: normal;
 
 .text{
     float: left;
+    margin-right: 10px;
+    margin-left: -25px;
+
 }
 
 .bodywrap{
@@ -247,6 +250,8 @@ i{
 
 #modal.active{
     display: block;
+    z-index: 1;
+
 }
 
 /* 레이어 팝업창 스타일 적용 */
@@ -257,6 +262,7 @@ i{
     left: 30%;
     top: 20%;
     background-color: #ffffff;
+
 }
 
 .notice{
@@ -264,6 +270,7 @@ i{
     height: 180px;
     width: 390px;
     margin-top: 10px;
+
 }
 #notice_wrap{
     width: 300px;
@@ -281,12 +288,14 @@ i{
     font-size: 25px !important;
     margin: 0 auto;
     display: block;
+    z-index: 1;
 
 
 }
 .closeBtn{
     margin-left: 20px;
     cursor: pointer;
+
 }
 #bodywrap{
     margin: 0 auto;
