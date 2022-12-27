@@ -201,7 +201,7 @@ font-style: normal;
 .text{
     float: left;
     margin-right: 10px;
-    margin-left: -25px;
+    margin-left: -35px;
 
 }
 
@@ -317,3 +317,7 @@ label{
     
 }
 
+.svg{
+    margin: 30px;
+    display: contents;
+}
