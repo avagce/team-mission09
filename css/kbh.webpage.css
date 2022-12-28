@@ -326,3 +326,18 @@ label{
     margin-left: 2px !important;
     list-style: none;
 }
+
+      /* 801px 이상(PC) */
+     @media(min-width:801px) {
+        .nav>li> *{margin: 0 auto!important; font-size: 23px!important;} 
+      }
+
+    /* 481PX~800PX 까지 적용(태블릿PC) */
+     @media(min-width:481px) and (max-width: 800px){
+        .nav>li> *{margin: 0 auto!important;  font-size: 17px!important;}
+    } 
+
+    /* 480PX까지 적용(모바일) */
+     @media(max-width: 480px){
+        .nav>li> *{margin: 0 auto!important; font-size: 23px!important;}
+    }  
