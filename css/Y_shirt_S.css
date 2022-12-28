@@ -75,10 +75,9 @@ header{
 }
 .top_menu{
     float: right;
-    width: 280px;
+    width: 250px;
     line-height: 40px;
     color: #fff;
-    position: absolute;
     right: 40px;
 }
 .top_menu li{
@@ -232,7 +231,7 @@ nav li a:hover{
     float: left;
     width: 49%;
     height: 500px;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 5px 5px 5px gray;
 }
 .cody img{
     position: absolute;
@@ -244,7 +243,7 @@ nav li a:hover{
     float: right;
     width: 49%;
     height: 500px;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 5px 5px 5px gray;
 }
 .best img{
     position: absolute;
@@ -262,7 +261,7 @@ nav li a:hover{
     float: left;
     width: 24.5%;
     height: 250px;
-    box-shadow: 0 10px 10px gray;
+    box-shadow: 5px 5px 5px gray;
 }
 .event1 img{
     position: absolute;
@@ -274,7 +273,7 @@ nav li a:hover{
     float: left;
     width: 24.5%;
     height: 250px;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 5px 5px 5px gray;
 }
 .event2 img{
     position: absolute;
@@ -286,8 +285,7 @@ nav li a:hover{
     float: right;
     width: 24.5%;
     height: 250px;
-    background-color: violet;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 5px 5px 5px gray;
 }
 .event3 svg{
     width: 30px;
@@ -303,7 +301,7 @@ tr, td, th{
     float: right;
     width: 24.5%;
     height: 250px;
-    box-shadow: 0px 10px 10px gray;
+    box-shadow: 0px 5px 5px gray;
 }
 .event4 img{
     position: absolute;
@@ -318,7 +316,10 @@ tr, td, th{
     border-top: 2px solid lightgray;
     padding-top: 30px;
 }
-.stlist p{font-size: 40px; font-family: 'Noto Sans KR', sans-serif;}
+.stlist p{
+    font-size: 40px;
+    font-family: ''Noto Sans KR', sans-serif';
+}
 .stlist li{
     position: relative;
     display: inline-block;
@@ -402,7 +403,8 @@ footer li a{
     }
     .top_menu{
         font-size: 10px !important;
-        position: absolute;
+        right: 20px;
+        width: 230px;
     }
     .top_menu ul{
         right: 0;
@@ -459,9 +461,56 @@ footer li a{
     .bx-viewport{
         height: 400px !important;
     }
+    .market{
+        height: 390px;
+    }
     .market_list img{
         width: 100%;
         height: 390px;
+    }
+    .banner{
+        height: 600px;
+    }
+    .banner1{
+        height: 350px;
+    }
+    .banner1 p {
+        line-height: 300px;
+        font-size: 35px;
+    }
+    .cody{
+        height: 300px;
+        box-shadow: 5px 5px 5px gray;
+    }
+    .best{
+        height: 300px;
+        box-shadow: 5px 5px 5px gray;
+    }
+    .event1{
+        height: 180px;
+    }
+    .event2{
+        height: 180px;
+    }
+    .event3{
+        height: 180px;
+    }
+    .event4{
+        height: 180px;
+    }
+    .stlist p{
+        font-size: 30px;
+    }
+    .stlist li{
+        width: 150px;
+        height: 170px;
+        vertical-align: top;
+        margin: 30px 15px 50px;
+    }
+    .text p{
+        margin: 5px 0px;
+        font-size: 12px;
+        color: #000;
     }
 }
 @media (max-width: 767px) {
@@ -486,8 +535,10 @@ footer li a{
         color: #2d3a4b;
     }
     .top_menu ul{
-        width: 300px;
+        width: 200px;
         margin-right: 20px;
+        position: absolute;
+        right: 5px;
     }
     .top_menu a{
         font-size: 12px;
@@ -567,51 +618,68 @@ footer li a{
         height: 200px;
     }
     .market{
-        height: 350px;
+        height: 230px;
+        margin-bottom: 50px;
     }
     .bx-viewport{
-        height: 300px !important;
+        height: 230px !important;
     }
     .market img{
         width: 100%;
-        height: 290px;
+        height: 220px;  
     }
-    .notice{
-        position: absolute;
-        right: 3%;
+    .banner{
+        height: 450px;
     }
-    .notice_title h4{
-        font-size: 11px;
-        line-height: 17px;
+    .banner1{
+        height: 280px;
     }
-    .notice_title small{
-        font-size: 11px;
+    .banner1 p {
+        line-height: 220px;
+        text-align: center;
+        font-size: 20px;
+        opacity: .8;
+        color: lightskyblue;
     }
-    .notice ul{
-        margin-top: 10px;
+    .cody{
+        height: 220px;
+        box-shadow: 5px 5px 5px gray;
     }
-    .notice li{
-        font-size: 8px;
-        line-height: 10px;
+    .best{
+        height: 220px;
+        box-shadow: 5px 5px 5px gray;
     }
-    .notice a{
-        font-size: .8rem;
-        font-family: 'MonoplexKR-Regular';
+    .banner2{
+        height: 130px;
+    }
+    .event1{
+        height: 130px;
+    }
+    .event2{
+        height: 130px;
+    }
+    .event3{
+        height: 130px;
+    }
+    .event4{
+        height: 130px;
+    }
+    .stlist p{
+        font-size: 20px;
+    }
+    .stlist h1{
+        font-size: 30px;
+    }
+    .stlist li{
+        width: 80px;
+        height: 100px;
+        vertical-align: top;
+        margin: 30px 10px 50px;
+    }
+    .text p{
+        margin: 5px 0px;
+        font-size: 10px;
         color: #000;
-    }
-    .notice a span{
-        visibility: hidden;
-    }
-    th{
-        width: 20px;
-    }
-    td{
-        text-overflow: ellipsis !important;
-        overflow: hidden !important;
-        word-break: break-all;
-    }
-    table{
-        vertical-align: middle;
     }
     footer{
         visibility: hidden;

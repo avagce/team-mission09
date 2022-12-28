@@ -86,7 +86,7 @@
                 <img src="../resources/images/yys_cookie.jpg" alt="공지사항이미지" width="1000px" height="500px">
                 <p class="closeWrap">
                     <input type="checkbox" name="expiresChk" id="expiresChk">
-                    <label for="expiresChk">3일동안 이 창 열지 않기</label>
+                    <label for="expiresChk">오늘 하루 이 창 열지 않기</label>
                     <button class="closeBtn">닫기</button>
                 </p>
             </div>
@@ -138,7 +138,6 @@
                 </a>
             </div>
             <div class="best">
-
                 <a href="#"><img src="../resources/images/yys_cody.jpg" alt="Best">
                     <p>BEST</p>
                 </a>
@@ -168,7 +167,6 @@
                             </a></td>
                     </tr>
                 </table>
-
             </div>
             <div class="event4">
                 <a href="#"><img src="../resources/images/yys_event3.jpg" alt=""></a>
@@ -486,21 +484,23 @@
             });
             // $(".palxtext").delay(1000).animate()
             // 의미는 .palxtext에 적용된 animate() 메서드가 1000ms(1s = 1초)후에 작동함을 의미합니다.
+            // 화면의 크기가 최소 1200px 이상일때 함수를 발생시킨다.
             if (matchMedia("screen and (min-width: 1200px)").matches) {
                 $(".palxtext").delay(1000).animate({ opacity: 0.8, top: 300 }, 600, "swing")
+                // 화면의 크기가 최소 768px 최대 1200px 이상일때 함수를 발생시킨다.
             } else if(matchMedia("(min-width: 768px)  and (max-width: 1199px)").matches){
                 $(".palxtext").delay(1000).animate({ opacity: 0.8, top: 200 }, 600, "swing")
+                // 위의 설정이 없으면 아래의 함수를 실행시킨다
             } else{
                 $(".palxtext").delay(1000).animate({ opacity: 0.8, top: 150 }, 600, "swing")
             }
         });
         // 쿠키("popup")의 값이 'none'이면
-        // id값이 'notice_wrap'인 요소를 숨깁니다.
+        // #cookie인 요소를 숨깁니다.
         if ($.cookie('popup') == 'none') {
             $("#cookie").hide();
         }
-        // cookie 값이'closeBtn'인 요소를 클릭하면
-        // 체크박스의 체크 유무에 따라
+        // 'closeBtn'인 요소를 클릭하면 체크박스의 체크 유무에 따라
         // 쿠키를 생성하여 하루동안 저장합니다.
         var $expiresChk = $("#expiresChk");
         $(".closeBtn").on("click", closePop);
