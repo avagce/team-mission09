@@ -3,7 +3,7 @@
 
 *{
     font-family: 'Cafe24Ssurround';
-    font-size: 23px;
+    /* font-size: 23px; */
     font-weight: bolder;
     list-style: none;
     text-decoration: none;
@@ -72,6 +72,7 @@
 .nav>li>a{
     margin-top: 3px;
     background-image: linear-gradient(to bottom,#f8eb38 0,#e70e0e 100%) !important;    
+    font-size: 23px;
     
 }
 
@@ -186,13 +187,6 @@ font-style: normal;
 
 
 
-.navbar-inverse .navbar-brand{
-    font-size: 35px;
-    color: #ffbb00;
-    /* display: contents; */
-
-    
-}
 
 .container-fluid{
     background-color: #5fa7ff;
@@ -232,6 +226,7 @@ i{
 .navbar-brand{
     color: #ffbb00 !important;
     margin-top: 15px;
+    font-size: 35px !important;
 
 } 
 
@@ -317,3 +312,26 @@ label{
     
 }
 
+.svg{
+    margin-top: 15px !important;
+    margin-left: 35px !important;
+    /* display: contents; */
+}
+
+#slide{
+    width: 100%;
+    height: 100%;
+    display: contents;
+    float: left;
+    position: initial;
+}
+
+.middlebar{
+    /* font-size: 15px !important; */
+    display: contents;
+    /* margin-right: 30px; */
+    width: 10px !important;
+    height: 10px !important;
+
+
+}
