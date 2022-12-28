@@ -1,6 +1,4 @@
 @charset "utf-8";
-
-
 *{
     font-family: 'Cafe24Ssurround';
     /* font-size: 23px; */
@@ -19,7 +17,8 @@
 }
     
 .navbar-inverse{
-    background: rgb(11, 168, 103) !important;
+    /* background: rgb(11, 168, 103) !important; */
+    background-image: url(../resources/images/kbh_background.png)!important;
 }
 
 .header{
@@ -175,9 +174,6 @@ font-style: normal;
     margin-top: 50px;
 }
 
-
-
-
 .container-fluid{
     background-color: #5fa7ff;
 }
@@ -321,4 +317,12 @@ label{
     float: left;
     width: 100px !important;
     height: 100 !important;
+    font-size: 20px;
+    color: #0054a3;
+    font-weight: lighter;
+}
+
+#middlebar{
+    margin-left: 2px !important;
+    list-style: none;
 }
