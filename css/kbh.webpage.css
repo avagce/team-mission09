@@ -64,17 +64,17 @@
 
 }
 
-.nav>li{
+/* .nav>li{
     margin-left: 55px;
     margin-top: 5px;
     margin-bottom: 5px;
     
-}
+} */
 
 .nav>li>a{
     margin-top: 3px;
     background-image: linear-gradient(to bottom,#f8eb38 0,#e70e0e 100%) !important;    
-    font-size: 23px;
+    /* font-size: 23px; */
     
 }
 
@@ -329,15 +329,31 @@ label{
 
       /* 801px 이상(PC) */
      @media(min-width:801px) {
-        .nav>li> *{margin: 0 auto!important; font-size: 23px!important;} 
+        .nav>li> *{
+            margin-bottom: 15px!important; margin-top: 15px!important;
+            margin-left: 55px!important;   font-size: 23px!important;
+            }
+        .owl-carousel owl-theme{
+            width: 90%;
+        }
       }
 
     /* 481PX~800PX 까지 적용(태블릿PC) */
      @media(min-width:481px) and (max-width: 800px){
-        .nav>li> *{margin: 0 auto!important;  font-size: 17px!important;}
-    } 
+        .nav>li> *{
+            margin: 0 auto!important;  font-size: 17px!important;}
+    }       .owl-carousel owl-theme{
+        width: 90%;
+    }
 
     /* 480PX까지 적용(모바일) */
      @media(max-width: 480px){
         .nav>li> *{margin: 0 auto!important; font-size: 23px!important;}
+        .owl-carousel owl-theme{
+            width: 90%;
+        }
     }  
+
+    margin-left: 55px;
+    margin-top: 5px;
+    margin-bottom: 5px;
