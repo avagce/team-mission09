@@ -5,17 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyTeam02 Mission 09</title>
+    <style>
+        *{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+        .main{
+            text-align: center;
+        }
+        P{
+            position: relative;
+            display: inline-block;
+            width: 600px;
+            height: 40px;
+            background: rgba(225, 113, 113, 0.9);
+            font-size: 30px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .maintx{
+            opacity: 0;
+            top: 0;
+        }
+    </style>
     <!--[if lt IE9]>
         <script src="js/html5shiv.js"</script>
     <![endif]-->
 </head>
-<body>
+<body data-vide-bg="resources/images/main.mp4" data-vide-options="loop: false,">
     <div class="main">
         <div>
-            <p>회사소개 메인페이지 반응형 웹 구현</p>
+            <p class="maintx">회사소개 메인페이지 반응형 웹 구현</p>
         </div>
     </div>
     <script src="javascript/jquery-2.2.4.min.js"></script>
     <script src="javascript/jquery.vide.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".maintx").delay(500).animate({ opacity: 1, top: 100 }, 500, "swing")
+        })
+    </script>
 </body>
 </html>
