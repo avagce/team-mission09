@@ -46,7 +46,13 @@
             height: 100%;
             left: 0;
         }
-<<<<<<< HEAD
+        h2{
+            margin-top: 100px;
+            color: #fff;
+            font-size: 50px;
+            font-style: italic;
+            text-shadow: 5px 5px 5px lightgray;
+        }
         @keyframes sparkle {
   from {
     background-position: 0% 100%;
@@ -78,15 +84,7 @@
   z-index: -1;
   transform: scale(0.99) translateY(3px);
 }
-=======
-        h2{
-            margin-top: 100px;
-            color: #fff;
-            font-size: 50px;
-            font-style: italic;
-            text-shadow: 5px 5px 5px lightgray;
-        }
->>>>>>> d270c45c11425b0887c29d3dba7caf30d15a91d5
+
     </style>
     <!--[if lt IE9]>
         <script src="js/html5shiv.js"</script>
@@ -172,6 +170,37 @@
 		ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
 		return canvas.toDataURL();
     }
+    // 3d효과 넣기 연습
+    const cards = document.querySelector(".teammp");
+const images = document.querySelectorAll(".test");
+// 백그라운드 일단 주석처리
+// const backgrounds = document.querySelectorAll(".card__bg");
+const range = 40;
+
+// const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
+const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
+
+let timeout;
+document.addEventListener('mousemove', ({x, y}) => {
+  if (timeout) {
+    window.cancelAnimationFrame(timeout);
+  }
+    
+  timeout = window.requestAnimationFrame(() => {
+    const yValue = calcValue(y, window.innerHeight);
+    const xValue = calcValue(x, window.innerWidth);
+
+    cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+    [].forEach.call(images, (image) => {
+      image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+    });
+
+    [].forEach.call(backgrounds, (background) => {
+      background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
+    })
+  })
+}, false);
     </script>
 </body>
 </html>
