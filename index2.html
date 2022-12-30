@@ -46,6 +46,37 @@
             height: 100%;
             left: 0;
         }
+        @keyframes sparkle {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 200% 100%;
+  }
+}
+.subtname {
+  
+  display: inline-block;
+ 
+  font-family: Helvetica Neue;
+  border-radius: 4px;
+  position: relative;
+}
+.subtname:before {
+  animation: sparkle 4s infinite linear;
+  background: linear-gradient(90deg, #7FEFBD 0%, #FFF689 11%, #EC0B43 22%, #7FEFBD 33%, #FFF689 44%, #EC0B43 55%, #7FEFBD 66%, #FFF689 77%, #EC0B43 88%, #7FEFBD 100%);
+  background-size: 300% 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  filter: blur(3px);
+  z-index: -1;
+  transform: scale(0.99) translateY(3px);
+}
     </style>
     <!--[if lt IE9]>
         <script src="js/html5shiv.js"</script>
@@ -53,8 +84,10 @@
 </head>
 <body data-vide-bg="resources/images/main.mp4" data-vide-options="loop: true,">
     <div class="main">
+      
         <div>
             <p class="maintx">회사소개 메인페이지 반응형 웹 구현</p>
+            <p class="subtname">Team02</p>
             <div class="teammp">
                 <div class="test">
                     <a href="#"><img src="resources/images/main1.png" alt="dd"></a>
@@ -77,6 +110,8 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $(".maintx").delay(500).animate({ opacity: 1, top: 100 }, 500, "swing")
+            $(".subtname").delay(600).animate({ opacity: 1, top: 150 }, 600, "swing")
+
         })
 	// On window load. This waits until images have loaded which is essential
 	$(window).load(function(){
