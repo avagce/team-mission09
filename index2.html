@@ -33,7 +33,7 @@
         .test{
             position: relative;
             display: inline-block;
-            width: 400px;
+            width: 20%;
             height: 500px;
             margin: 0 20px;
             background: rgba(255, 255, 255, 0.9);
@@ -46,6 +46,7 @@
             height: 100%;
             left: 0;
         }
+<<<<<<< HEAD
         @keyframes sparkle {
   from {
     background-position: 0% 100%;
@@ -77,6 +78,15 @@
   z-index: -1;
   transform: scale(0.99) translateY(3px);
 }
+=======
+        h2{
+            margin-top: 100px;
+            color: #fff;
+            font-size: 50px;
+            font-style: italic;
+            text-shadow: 5px 5px 5px lightgray;
+        }
+>>>>>>> d270c45c11425b0887c29d3dba7caf30d15a91d5
     </style>
     <!--[if lt IE9]>
         <script src="js/html5shiv.js"</script>
@@ -90,7 +100,7 @@
             <p class="subtname">Team02</p>
             <div class="teammp">
                 <div class="test">
-                    <a href="#"><img src="resources/images/main1.png" alt="dd"></a>
+                    <a href="#"><img src="resources/images/yys.png" alt="dd"></a>
                 </div>
                 <div class="test">
                     <a href="#"><img src="resources/images/main2.png" alt="dd"></a>
@@ -101,6 +111,7 @@
                 <div class="test">
                     <a href="#"><img src="resources/images/main4.png" alt="dd"></a>
                 </div> 
+                <h2>Mission 09</h2>
             </div>
         </div>
       
@@ -132,10 +143,10 @@
 		
 		// Fade image 
 		$('.test img').mouseover(function(){
-			$(this).parent().find('img:first').stop().animate({opacity:1}, 1000);
+			$(this).parent().find('img:first').stop().animate({opacity:1}, 500);
 		})
 		$('.img_grayscale').mouseout(function(){
-			$(this).stop().animate({opacity:0}, 1000);
+			$(this).stop().animate({opacity:0}, 500);
 		});		
 	});
 	
