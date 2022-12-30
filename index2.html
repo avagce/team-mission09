@@ -11,6 +11,7 @@
             width: 100%;
             height: 100%;
             padding: 0;
+            overflow: hidden;
         }
         .main{
             text-align: center;
@@ -29,23 +30,102 @@
             opacity: 0;
             top: 0;
         }
+        .test{
+            position: relative;
+            display: inline-block;
+            width: 400px;
+            height: 500px;
+            margin: 0 20px;
+            background: rgba(255, 255, 255, 0.9);
+            margin-top: 10%;
+            border-radius: 10px;
+        }
+        .test img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
     </style>
     <!--[if lt IE9]>
         <script src="js/html5shiv.js"</script>
     <![endif]-->
 </head>
-<body data-vide-bg="resources/images/main.mp4" data-vide-options="loop: false,">
+<body data-vide-bg="resources/images/main.mp4" data-vide-options="loop: true,">
     <div class="main">
         <div>
             <p class="maintx">회사소개 메인페이지 반응형 웹 구현</p>
+            <div class="teammp">
+                <div class="test">
+                    <a href="#"><img src="resources/images/main1.png" alt="dd"></a>
+                </div>
+                <div class="test">
+                    <a href="#"><img src="resources/images/main2.png" alt="dd"></a>
+                </div>
+                <div class="test">
+                    <a href="#"><img src="resources/images/main3.png" alt="dd"></a>
+                </div>
+                <div class="test">
+                    <a href="#"><img src="resources/images/main4.png" alt="dd"></a>
+                </div> 
+            </div>
         </div>
+      
     </div>
     <script src="javascript/jquery-2.2.4.min.js"></script>
     <script src="javascript/jquery.vide.min.js"></script>
-    <script>
+    <script type="text/javascript">
         $(document).ready(function(){
             $(".maintx").delay(500).animate({ opacity: 1, top: 100 }, 500, "swing")
         })
+	// On window load. This waits until images have loaded which is essential
+	$(window).load(function(){
+		
+		// Fade in images so there isn't a color "pop" document load and then on window load
+		$(".test img").fadeIn(500);
+		
+		// clone image
+		$('.test img').each(function(){
+			var el = $(this);
+			el.css({"position":"absolute"}).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({"position":"absolute","z-index":"998","opacity":"0"}).insertBefore(el).queue(function(){
+				var el = $(this);
+				el.parent().css({"width":this.width,"height":this.height});
+				el.dequeue();
+			});
+			this.src = grayscale(this.src);
+		});
+		
+		// Fade image 
+		$('.test img').mouseover(function(){
+			$(this).parent().find('img:first').stop().animate({opacity:1}, 1000);
+		})
+		$('.img_grayscale').mouseout(function(){
+			$(this).stop().animate({opacity:0}, 1000);
+		});		
+	});
+	
+	// Grayscale w canvas method
+	function grayscale(src){
+		var canvas = document.createElement('canvas');
+		var ctx = canvas.getContext('2d');
+		var imgObj = new Image();
+		imgObj.src = src;
+		canvas.width = imgObj.width;
+		canvas.height = imgObj.height; 
+		ctx.drawImage(imgObj, 0, 0); 
+		var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+		for(var y = 0; y < imgPixels.height; y++){
+			for(var x = 0; x < imgPixels.width; x++){
+				var i = (y * 4) * imgPixels.width + x * 4;
+				var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+				imgPixels.data[i] = avg; 
+				imgPixels.data[i + 1] = avg; 
+				imgPixels.data[i + 2] = avg;
+			}
+		}
+		ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+		return canvas.toDataURL();
+    }
     </script>
 </body>
 </html>
