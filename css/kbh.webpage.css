@@ -353,3 +353,7 @@ label{
             width: 90%;
         }
     }  
+
+    .banner{
+        display: contents;
+    }
