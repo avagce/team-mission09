@@ -11,9 +11,8 @@
 }
 
 .intro_bg{
-    background-image:url(../resources/images/kimbaekho_images/mart01.jpg);
     width: 1280px;
-    height: 700px;
+    height: 5000px;
 }
     
 .navbar-inverse{
@@ -359,8 +358,9 @@ label{
         display: contents;
     }
 
-    .sale{
+    .row{
         display: contents !important;
-        width: 10px !important;
-        height: 10px !important;
+        width: 10% !important;
+        height: 10% !important;
+        margin-right: 50px;
     }
