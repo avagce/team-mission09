@@ -361,9 +361,6 @@ label{
 
     .sale{
         display: contents !important;
-        position: relative !important;
-        float: left !important;
-        width: 5%;
-        height: 5%;
-        margin: 0 auto;
+        width: 10px !important;
+        height: 10px !important;
     }
