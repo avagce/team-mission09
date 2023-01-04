@@ -404,7 +404,7 @@ footer li a{
         top: 40% !important;
     }
     .logo img{
-        height: 70px;
+        height: 70px !important;
     }
     .top_menu{
         position: absolute;
@@ -525,9 +525,6 @@ footer li a{
     .event3{
         height: 180px;
     }
-    /* .table{
-        font-size: 12px;
-    } */
     .event4{
         height: 180px;
     }
