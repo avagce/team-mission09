@@ -377,3 +377,7 @@ label{
         border: 15px solid rgba(216, 216, 216, 0.788);
         background: rgb(239, 241, 195);
     }
+
+    .btn{
+        font-size: 20px;
+    }
