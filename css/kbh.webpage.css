@@ -331,8 +331,7 @@ label{
      @media(min-width:801px) {
         .nav>li> *{
             margin-bottom: 15px!important; margin-top: 15px!important;
-            margin-left: 55px!important;   font-size: 23px!important;
-            }
+            margin-left: 55px!important;   font-size: 23px!important;}
         .owl-carousel owl-theme{
             width: 90%;
         }
@@ -341,10 +340,11 @@ label{
     /* 481PX~800PX 까지 적용(태블릿PC) */
      @media(min-width:481px) and (max-width: 800px){
         .nav>li> *{
-            margin: 0 auto!important;  font-size: 17px!important;}
-    }       .owl-carousel owl-theme{
+            margin-top: 8px !important;  padding-right: 11px !important; padding-left: 10px !important; font-size: 17px!important;}
+          .owl-carousel owl-theme{
         width: 90%;
-    }
+        }
+     }
 
     /* 480PX까지 적용(모바일) */
      @media(max-width: 480px){
