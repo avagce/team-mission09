@@ -300,7 +300,7 @@ label{
 
 .svg{
     margin-top: 15px !important;
-    margin-left: 35px !important;
+    margin-left: 45px !important;
     /* display: contents; */
 }
 
@@ -379,5 +379,13 @@ label{
     }
 
     .btn{
-        font-size: 20px;
+        font-size: 23px !important;
+    }
+
+    .active{
+        z-index: 1;
+    }
+
+    .owl-carousel{
+        position: inherit !important;
     }
