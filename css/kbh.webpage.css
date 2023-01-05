@@ -369,3 +369,11 @@ label{
         margin-bottom: 20px;
         padding-left: 27px !important;
     }
+
+    footer{
+        text-align: center;
+        font-weight: normal !important;
+        color: rgb(53, 53, 53);
+        border: 15px solid rgba(216, 216, 216, 0.788);
+        background: rgb(239, 241, 195);
+    }
