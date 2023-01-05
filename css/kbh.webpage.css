@@ -358,9 +358,14 @@ label{
         display: contents;
     }
 
-    .row{
+    .row {
         display: contents !important;
-        width: 10% !important;
-        height: 10% !important;
-        margin-right: 50px;
+        margin-right: 5px !important;
+        float: left !important;
+        margin: 5px !important;
+        margin-bottom: 55px!important;
+    }
+    .col-lg-4{
+        margin-bottom: 20px;
+        padding-left: 27px !important;
     }
