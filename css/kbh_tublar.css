@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans+KR&display=swap');
+
+#content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    color: #aff500;
+    font-family: 'courgette', cursive;
+    font-size: 7em;
+    font-style: italic;
+    text-shadow: 2px 2px 3px #222, 2px 2px 3px black;
+}
+
+*{
+    color: rgb(157, 209, 255);
+    font-size: 30px;
+    font-weight: bold;
+}
+
