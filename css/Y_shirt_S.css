@@ -724,6 +724,10 @@ footer li a{
     .event4{
         height: 130px;
     }
+    .stlist{
+        margin: 0 20px;
+        padding: 0;
+    }
     .stlist p{
         font-size: 20px;
     }
