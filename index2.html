@@ -13,16 +13,13 @@
             padding: 0;
             overflow: hidden;
         }
-        .main{
-            text-align: center;
-        }
         P{
             position: relative;
             display: inline-block;
-            width: 700px;
-            height: 40px;
+            width: 1100px;
+            height: 70px;
             background: rgba(225, 113, 113, 0.9);
-            font-size: 30px;
+            font-size: 50px;
             color: #fff;
             font-weight: bold;
             border-radius: 5px;
@@ -47,12 +44,25 @@
             height: 100%;
             left: 0;
         }
+        div{
+            text-align: center;
+        }
         h2{
-            margin-top: 100px;
+            position: relative;
+            opacity: 0;
+            display: inline-block;
+            text-align: center;
+            margin-top: 50px;
             color: #fff;
+            top: -50px;
             font-size: 50px;
             font-style: italic;
             text-shadow: 5px 5px 5px lightgray;
+            width: 500px;
+            height: 60px;
+            line-height: 50px;
+            border-radius: 5px;
+            background-color: rgba(225, 113, 113, 0.9);
         }
         @keyframes sparkle {
   from {
@@ -62,30 +72,6 @@
     background-position: 200% 100%;
   }
 }
-.subtname {
-  
-  display: inline-block;
- 
-  font-family: Helvetica Neue;
-  border-radius: 4px;
-  position: relative;
-}
-.subtname:before {
-  animation: sparkle 4s infinite linear;
-  background: linear-gradient(90deg, #7FEFBD 0%, #FFF689 11%, #EC0B43 22%, #7FEFBD 33%, #FFF689 44%, #EC0B43 55%, #7FEFBD 66%, #FFF689 77%, #EC0B43 88%, #7FEFBD 100%);
-  background-size: 300% 100%;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  filter: blur(3px);
-  z-index: -1;
-  transform: scale(0.99) translateY(3px);
-}
-
     </style>
     <!--[if lt IE9]>
         <script src="js/html5shiv.js"</script>
@@ -118,7 +104,8 @@
     <script src="javascript/jquery.vide.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".maintx").delay(500).animate({ opacity: 1, top: 100 }, 500, "swing")
+            $(".maintx").delay(500).animate({ opacity: 1, top: 50 }, 500, "swing")
+            $("h2").delay(1000).animate({opacity:1, top: 0}, 500, "swing")
 
         })
 	// On window load. This waits until images have loaded which is essential
