@@ -1,0 +1,159 @@
+@charset "uft-8";
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+*{
+    font-family: 'Stylish', sans-serif;
+}
+
+.carousel-control .control-icon {
+    font-size: 48px;
+    height: 30px;
+    margin-top: -15px;
+    width: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    }
+    .carousel-control .prev { margin-left:  -15px;  left: 50%; } /* Prev */
+    .carousel-control .next { margin-right: -15px; right: 50%; } /* Next */
+
+#myCarousel{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
+section.main-slider{
+    margin-top: 20px;
+    margin-left: 20%;
+}
+
+.container {
+    /* padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 15%;
+    width: 35%;
+    float: left; */
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.table-striped{
+    width: 30%;
+    margin-left: 10%;
+    float: left;
+}
+
+p.footer{
+    clear: both;
+}
+
+img.img-thumbnail{
+    max-width: 15%;
+}
+
+
+.main_page{
+    text-align: center;
+}
+
+footer{
+    height: 10vh;
+    width: 100%;
+    line-height: 10vh;
+    background-color: aliceblue;
+    top: 120vh;
+}
+
+.footer{
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+    width: 100%;
+    background-color: paleturquoise;
+    
+}
+
+
+footer a:hover{
+    text-decoration: none;
+}
+
+.footer:hover{
+    color: #666;
+}
+
+.fa-youtube{
+    color: red;
+}
+
+p.maintitle{
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+div.navbar-header{
+    width: 100%;
+}
+
+ul.dropdown-menu{
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-default{
+    margin: 0;
+}
+
+.popup-overlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    rigth:0;
+    bottom:0;
+    background-color:rgba(0,0,0,.5);
+    width:100%;
+    height:100%;
+    text-align:center;
+    padding:1rem;
+    align-items:center;
+    justify-content:center;
+    
+  }
+
+  .popup{
+    display:inline-block;
+    width:400px;
+    min-height:200px;
+    background-color:white;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+  }
+
+  a.close,
+a.submit{
+  margin-top:0;
+  display:inline-block;
+  color:white;
+  background-color:#673862;
+  border-radius: 5px;
+  padding: .25rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-right:1rem;
+  &:last-of-type{
+    margin-right:0;
+  }
+}
