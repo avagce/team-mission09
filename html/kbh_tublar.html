@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개 영상</title>
+    <link rel="stylesheet" href="../css/kbh_tublar.css">
+</head>
+<body>
+    <div id="wrapper">
+        <a href="#" class="tubular-play">재생</a>
+        <a href="#" class="tubular-pause">일시정지</a>
+        <a href="#" class="tubular-volume-up">소리키우기</a>
+        <a href="#" class="tubular-volume-down">소리줄이기</a>
+        <a href="#" class="tubular-mute">소리끄기</a>
+    </div>
+    <script src="../javascript/jquery-2.2.4.min.js"></script>
+    <script src="../javascript/jquery.tubular.1.0.js"></script>
+    <script>
+         $('document').ready(function() {
+        var options = { videoId: 'kqbbf442q6o', mute: true };
+        $('#wrapper').tubular(options);
+            // f-UGhWj1xww cool sepia hd
+            // 49SKbS7Xwf4 beautiful barn sepia
+        });
+    </script>
+</body>
+</html>
