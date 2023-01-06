@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyTeam02 Mission 09</title>
     <style>
-        *{
+        * {
             margin: 0;
             width: 100%;
             height: 100%;
             padding: 0;
             overflow: hidden;
         }
-        P{
+
+        P {
             position: relative;
             display: inline-block;
             width: 1100px;
@@ -24,11 +26,13 @@
             font-weight: bold;
             border-radius: 5px;
         }
-        .maintx{
+
+        .maintx {
             opacity: 0;
             top: 0;
         }
-        .test{
+
+        .test {
             position: relative;
             display: inline-block;
             width: 20%;
@@ -38,16 +42,19 @@
             margin-top: 10%;
             border-radius: 10px;
         }
-        .test img{
+
+        .test img {
             position: absolute;
             width: 100%;
             height: 100%;
             left: 0;
         }
-        div{
+
+        div {
             text-align: center;
         }
-        h2{
+
+        h2 {
             position: relative;
             opacity: 0;
             display: inline-block;
@@ -64,22 +71,25 @@
             border-radius: 5px;
             background-color: rgba(225, 113, 113, 0.9);
         }
+
         @keyframes sparkle {
-  from {
-    background-position: 0% 100%;
-  }
-  to {
-    background-position: 200% 100%;
-  }
-}
+            from {
+                background-position: 0% 100%;
+            }
+
+            to {
+                background-position: 200% 100%;
+            }
+        }
     </style>
     <!--[if lt IE9]>
         <script src="js/html5shiv.js"</script>
     <![endif]-->
 </head>
+
 <body data-vide-bg="resources/images/main.mp4" data-vide-options="loop: true,">
     <div class="main">
-      
+
         <div>
             <p class="maintx">회사소개 메인페이지 반응형 웹 구현 Team02</p>
             <div class="teammp">
@@ -94,99 +104,100 @@
                 </div>
                 <div class="test">
                     <a href="#"><img src="resources/images/main4.png" alt="dd"></a>
-                </div> 
+                </div>
                 <h2>Mission 09</h2>
             </div>
         </div>
-      
+
     </div>
     <script src="javascript/jquery-2.2.4.min.js"></script>
     <script src="javascript/jquery.vide.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $(".maintx").delay(500).animate({ opacity: 1, top: 50 }, 500, "swing")
-            $("h2").delay(1000).animate({opacity:1, top: 0}, 500, "swing")
+            $("h2").delay(1000).animate({ opacity: 1, top: 0 }, 500, "swing")
 
         })
-	// On window load. This waits until images have loaded which is essential
-	$(window).load(function(){
-		
-		// Fade in images so there isn't a color "pop" document load and then on window load
-		$(".test img").fadeIn(500);
-		
-		// clone image
-		$('.test img').each(function(){
-			var el = $(this);
-			el.css({"position":"absolute"}).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({"position":"absolute","z-index":"998","opacity":"0"}).insertBefore(el).queue(function(){
-				var el = $(this);
-				el.parent().css({"width":this.width,"height":this.height});
-				el.dequeue();
-			});
-			this.src = grayscale(this.src);
-		});
-		
-		// Fade image 
-		$('.test img').mouseover(function(){
-			$(this).parent().find('img:first').stop().animate({opacity:1}, 500);
-		})
-		$('.img_grayscale').mouseout(function(){
-			$(this).stop().animate({opacity:0}, 500);
-		});		
-	});
-	
-	// Grayscale w canvas method
-	function grayscale(src){
-		var canvas = document.createElement('canvas');
-		var ctx = canvas.getContext('2d');
-		var imgObj = new Image();
-		imgObj.src = src;
-		canvas.width = imgObj.width;
-		canvas.height = imgObj.height; 
-		ctx.drawImage(imgObj, 0, 0); 
-		var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
-		for(var y = 0; y < imgPixels.height; y++){
-			for(var x = 0; x < imgPixels.width; x++){
-				var i = (y * 4) * imgPixels.width + x * 4;
-				var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
-				imgPixels.data[i] = avg; 
-				imgPixels.data[i + 1] = avg; 
-				imgPixels.data[i + 2] = avg;
-			}
-		}
-		ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
-		return canvas.toDataURL();
-    }
-    // 3d효과 넣기 연습
-    const cards = document.querySelector(".teammp");
-const images = document.querySelectorAll(".test");
-// 백그라운드 일단 주석처리
-// const backgrounds = document.querySelectorAll(".card__bg");
-const range = 40;
+        // On window load. This waits until images have loaded which is essential
+        $(window).load(function () {
 
-// const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
-const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
+            // Fade in images so there isn't a color "pop" document load and then on window load
+            $(".test img").fadeIn(500);
 
-let timeout;
-document.addEventListener('mousemove', ({x, y}) => {
-  if (timeout) {
-    window.cancelAnimationFrame(timeout);
-  }
-    
-  timeout = window.requestAnimationFrame(() => {
-    const yValue = calcValue(y, window.innerHeight);
-    const xValue = calcValue(x, window.innerWidth);
+            // clone image
+            $('.test img').each(function () {
+                var el = $(this);
+                el.css({ "position": "absolute" }).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({ "position": "absolute", "z-index": "998", "opacity": "0" }).insertBefore(el).queue(function () {
+                    var el = $(this);
+                    el.parent().css({ "width": this.width, "height": this.height });
+                    el.dequeue();
+                });
+                this.src = grayscale(this.src);
+            });
 
-    cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+            // Fade image 
+            $('.test img').mouseover(function () {
+                $(this).parent().find('img:first').stop().animate({ opacity: 1 }, 500);
+            })
+            $('.img_grayscale').mouseout(function () {
+                $(this).stop().animate({ opacity: 0 }, 500);
+            });
+        });
 
-    [].forEach.call(images, (image) => {
-      image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
-    });
+        // Grayscale w canvas method
+        function grayscale(src) {
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            var imgObj = new Image();
+            imgObj.src = src;
+            canvas.width = imgObj.width;
+            canvas.height = imgObj.height;
+            ctx.drawImage(imgObj, 0, 0);
+            var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            for (var y = 0; y < imgPixels.height; y++) {
+                for (var x = 0; x < imgPixels.width; x++) {
+                    var i = (y * 4) * imgPixels.width + x * 4;
+                    var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+                    imgPixels.data[i] = avg;
+                    imgPixels.data[i + 1] = avg;
+                    imgPixels.data[i + 2] = avg;
+                }
+            }
+            ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+            return canvas.toDataURL();
+        }
+        // 3d효과 넣기 연습
+        const cards = document.querySelector(".teammp");
+        const images = document.querySelectorAll(".test");
+        // 백그라운드 일단 주석처리
+        // const backgrounds = document.querySelectorAll(".card__bg");
+        const range = 40;
 
-    [].forEach.call(backgrounds, (background) => {
-      background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
-    })
-  })
-}, false);
+        // const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
+        const calcValue = (a, b) => (a / b * range - range / 2).toFixed(1) // thanks @alice-mx
+
+        let timeout;
+        document.addEventListener('mousemove', ({ x, y }) => {
+            if (timeout) {
+                window.cancelAnimationFrame(timeout);
+            }
+
+            timeout = window.requestAnimationFrame(() => {
+                const yValue = calcValue(y, window.innerHeight);
+                const xValue = calcValue(x, window.innerWidth);
+
+                cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+                [].forEach.call(images, (image) => {
+                    image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+                });
+
+                [].forEach.call(backgrounds, (background) => {
+                    background.style.backgroundPosition = `${xValue * .45}px ${-yValue * .45}px`;
+                })
+            })
+        }, false);
     </script>
 </body>
+
 </html>
